@@ -1,0 +1,6 @@
+sqlserver:
+  image: microsoft/mssql-server-linux
+  environment:
+    - sa_password=sa
+  ports:
+    - "1433:1433"
