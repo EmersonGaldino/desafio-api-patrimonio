@@ -5,6 +5,7 @@ Web API REST para o gerenciamento de patrimônios de uma empresa.
 Esta API foi construída sobre uma estrutura ASP.NET Core 2.1. Para seu perfeito funcionamento, é necessária a configuração do banco de dados antes de sua primeira execução.
 1. Preencha a chave ConnectionStrings >> Geral, dentro do arquivo appSettings.json com a ConnectionString correspondente ao banco SQL Server que será utilizado para este projeto.
 2. Após a configuração da ConnectionString, é necessária a execução do script Database.sql, localizado na raiz deste projeto, no banco de dados correspondente para a criação das tabelas necessárias. Uma vez executado tal script, o mesmo não recriará as tabelas caso seja executado novamente. Para recriá-las, as mesmas deverão ser excluídas manualmente antes de uma nova execução do script.
+3. A aplicação está configurada para operar nas portas 53022 e 44311 (SSL).
 
 ## Endpoints
 1.  GET		marcas						- Obter todas as marcas
