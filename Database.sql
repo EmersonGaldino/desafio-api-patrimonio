@@ -1,17 +1,19 @@
-CREATE TABLE Marca (
-	MarcaId INT NOT NULL,
-	Nome VARCHAR(64) NOT NULL,
+IF NOT EXISTS (SELECT name, xtype FROM sysobjects WHERE name='Marca' AND xtype='U')
+	CREATE TABLE Marca (
+		MarcaId INT NOT NULL IDENTITY(1,1),
+		Nome VARCHAR(64) NOT NULL UNIQUE,
 
-	CONSTRAINT(PK_Marca PRIMARY KEY(MarcaId))
-)
+		CONSTRAINT PK_Marca PRIMARY KEY(MarcaId)
+	)
+GO
 
-CREATE TABLE Patrimonio (
-	PatrimonioId INT NOT NULL,
-	MarcaId INT NOT NULL,
-	Nome VARCHAR(64) NOT NULL,
-	Descricao VARCHAR(256),
-	NroTombo INT,
+IF NOT EXISTS (SELECT name, xtype FROM sysobjects WHERE name='Patrimonio' AND xtype='U')
+	CREATE TABLE Patrimonio (
+		NroTombo INT NOT NULL IDENTITY(1,1),
+		MarcaId INT NOT NULL,
+		Nome VARCHAR(64) NOT NULL,
+		Descricao VARCHAR(256)
 
-	CONSTRAINT(PK_Patrimonio PRIMARY KEY(PatrimonioId)),
-	CONSTRAINT(FK_Patrimonio_MarcaId_Marca_MarcaId FOREIGN KEY(MarcaId) REFERENCES Marca(MarcaId))
-)
+		CONSTRAINT PK_Patrimonio PRIMARY KEY(NroTombo),
+		CONSTRAINT FK_Patrimonio_MarcaId_Marca_MarcaId FOREIGN KEY(MarcaId) REFERENCES Marca(MarcaId)
+	)
