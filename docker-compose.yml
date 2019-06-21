@@ -1,6 +1,7 @@
 sqlserver:
   image: microsoft/mssql-server-linux
   environment:
-    - sa_password=sa
+    - SA_PASSWORD=sa_password
+    - ACCEPT_EULA=Y
   ports:
     - "1433:1433"
