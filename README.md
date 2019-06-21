@@ -1,33 +1,33 @@
-# API de PatrimÙnio - Partner Group
-Web API REST para o gerenciamento de patrimÙnios de uma empresa.
+# API de Patrim√¥nio - Partner Group
+Web API REST para o gerenciamento de patrim√¥nios de uma empresa.
 
-## PrÈ-requisitos
-Esta API foi construÌda sobre uma estrutura ASP.NET Core 2.1. Para seu perfeito funcionamento, È necess·ria a configuraÁ„o do banco de dados antes de sua primeira execuÁ„o.
-1. Preencha a chave ConnectionStrings >> Geral, dentro do arquivo appSettings.json com a ConnectionString correspondente ao banco SQL Server que ser· utilizado para este projeto.
-2. ApÛs a configuraÁ„o da ConnectionString, È necess·ria a execuÁ„o do script Database.sql, localizado na raiz deste projeto, no banco de dados correspondente para a criaÁ„o das tabelas necess·rias. Uma vez executado tal script, o mesmo n„o recriar· as tabelas caso seja executado novamente. Para recri·-las, as mesmas dever„o ser excluÌdas manualmente antes de uma nova execuÁ„o do script.
+## Pr√©-requisitos
+Esta API foi constru√≠da sobre uma estrutura ASP.NET Core 2.1. Para seu perfeito funcionamento, √© necess√°ria a configura√ß√£o do banco de dados antes de sua primeira execu√ß√£o.
+1. Preencha a chave ConnectionStrings >> Geral, dentro do arquivo appSettings.json com a ConnectionString correspondente ao banco SQL Server que ser√° utilizado para este projeto.
+2. Ap√≥s a configura√ß√£o da ConnectionString, √© necess√°ria a execu√ß√£o do script Database.sql, localizado na raiz deste projeto, no banco de dados correspondente para a cria√ß√£o das tabelas necess√°rias. Uma vez executado tal script, o mesmo n√£o recriar√° as tabelas caso seja executado novamente. Para recri√°-las, as mesmas dever√£o ser exclu√≠das manualmente antes de uma nova execu√ß√£o do script.
 
 ## Endpoints
 GET		marcas						- Obter todas as marcas
 GET		marcas/{id}					- Obter uma marca por ID
-GET		marcas/{id}/patrimÙnios		- Obter todos os patrimÙnios de uma marca
+GET		marcas/{id}/patrim√¥nios		- Obter todos os patrim√¥nios de uma marca
 POST	marcas						- Inserir uma nova marca
 PUT		marcas/{id}					- Alterar os dados de uma marca
 DELETE	marcas/{id}					- Excluir uma marca
 
-GET		patrimonios					- Obter todos os patrimÙnios
-GET		patrimonios/{id}			- Obter um patrimÙnio por ID
-POST	patrimonios					- Inserir um novo patrimÙnio
-PUT		patrimonios/{id}			- Alterar os dados de um patrimÙnio
-DELETE	patrimonios/{id}			- Excluir um patrimÙnio
+GET		patrimonios					- Obter todos os patrim√¥nios
+GET		patrimonios/{id}			- Obter um patrim√¥nio por ID
+POST	patrimonios					- Inserir um novo patrim√¥nio
+PUT		patrimonios/{id}			- Alterar os dados de um patrim√¥nio
+DELETE	patrimonios/{id}			- Excluir um patrim√¥nio
 
-## ObservaÁ„o
-Considerando que o n˙mero de tombo de todo o patrimÙnio deve ser ˙nico e autom·tico, o mesmo foi utilizado como ID/Chave Prim·ria.
+## Observa√ß√£o
+Considerando que o n√∫mero de tombo de todo o patrim√¥nio deve ser √∫nico e autom√°tico, o mesmo foi utilizado como ID/Chave Prim√°ria.
 
-## CÛdigos de Erro
-200 - A solicitaÁ„o foi realizada com sucesso.
+## C√≥digos de Erro
+200 - A solicita√ß√£o foi realizada com sucesso.
 400 - Foi localizado algum problema com os dados enviados para a API.
-404 - O registro referenciado na solicitaÁ„o n„o foi encontrado na base de dados.
-500 - Houve algum erro no servidor durante a execuÁ„o dos processos solicitados.
+404 - O registro referenciado na solicita√ß√£o n√£o foi encontrado na base de dados.
+500 - Houve algum erro no servidor durante a execu√ß√£o dos processos solicitados.
 
-## AutenticaÁ„o
-Esta API n„o possui sistema de autenticaÁ„o.
+## Autentica√ß√£o
+Esta API n√£o possui sistema de autentica√ß√£o.
